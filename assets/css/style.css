@@ -343,9 +343,7 @@ main:focus { outline: none; }
   min-height: 44px;
   flex: none;
 }
-.logo svg { width: 28px; height: 31px; }
-.logo .hex { fill: var(--accent); transition: fill .3s; }
-.logo .p { fill: var(--accent-ink); }
+.logo img { width: 32px; height: auto; flex: none; }
 .logo span b { font-weight: 700; }
 .logo span i { font-style: normal; color: var(--muted); font-weight: 500; }
 

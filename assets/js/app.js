@@ -60,7 +60,8 @@
     chat: '<path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 10h8M8 13h5"/>'
   };
   const icon = (n, cls = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"${cls ? ` class="${cls}"` : ''}>${ICONS[n] || ''}</svg>`;
-  const LOGO = '<svg viewBox="0 0 32 36" aria-hidden="true" focusable="false"><path class="hex" d="M16 1.2 30.5 9.6v16.8L16 34.8 1.5 26.4V9.6Z"/><path class="p" fill-rule="evenodd" d="M11 9.5h6.6a5.6 5.6 0 0 1 0 11.2h-3v5.8H11V9.5Zm3.6 3.3v4.6h3a2.3 2.3 0 0 0 0-4.6h-3Z"/></svg>';
+  /* Original PrimePacks logo (from prime-packs.at) – stays the same in every accent */
+  const LOGO = '<img src="assets/img/logo.png" alt="" width="539" height="594">';
 
   /* ---------- Categories (same order as the live menu) ---------- */
   const CATS = [

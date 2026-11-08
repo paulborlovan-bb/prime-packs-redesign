@@ -37,6 +37,7 @@ You can also link straight to a version with `?accent=red` or `?accent=mint`, fo
 ## Notes
 
 - The cart is a demo stored in `localStorage`. "Zur Kasse" does not start a checkout.
+- The logo (`assets/img/logo.png`) is the original PrimePacks logo from prime-packs.at. It keeps its colours in every accent.
 - Product data lives in `data/products.js`. Images load from the Shopify CDN.
 - Legal links point to the live pages on prime-packs.at.
 - Stock badges only appear where Shopify tracks a quantity ("20 auf Lager"). Pre-orders are marked "Vorbestellung".
