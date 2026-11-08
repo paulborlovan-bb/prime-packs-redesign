@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#09090b">
   <link rel="icon" href="assets/img/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/img/logo.png">
-  <script>(function(){var d=document.documentElement;d.className='js';try{var a=new URLSearchParams(location.search).get('accent')||JSON.parse(localStorage.getItem('pp-accent')||'null');if(a==='red'||a==='mint')d.setAttribute('data-accent',a)}catch(e){}})();</script>
+  <script>(function(){var d=document.documentElement;d.className='js';try{var q=new URLSearchParams(location.search),a=q.get('accent')||JSON.parse(localStorage.getItem('pp-accent')||'null'),t=q.get('variant')||JSON.parse(localStorage.getItem('pp-theme')||'null');if(a==='red'||a==='mint')d.setAttribute('data-accent',a);if(t==='light')d.setAttribute('data-theme','light')}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.shopify.com">

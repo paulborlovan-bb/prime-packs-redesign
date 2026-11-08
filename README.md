@@ -16,19 +16,32 @@ All products, prices, photos and texts come from the current shop (Shopify expor
 
 ## Proposal switcher
 
-The round **Vorschlag** button at the bottom left switches the accent colour:
+The round **Vorschlag** button at the bottom left switches the design variant and the accent colour.
+
+**Variante**
+
+- **Dunkel (Variante 1):** dark crypto look on every page (default)
+- **Hell (Variante 2):** light page with white cards, mixed with dark blocks: top bar, hero product stage, price ticker, category band, two service panels, contact card, product photo stage and footer
+
+**Akzentfarbe**
 
 - **Blau:** PrimePacks brand (default)
 - **Rot:** PayHot moodboard
 - **Mint:** Vare moodboard
 
-You can also link straight to a version with `?accent=red` or `?accent=mint`, for example `index.html?accent=red`.
+You can also link straight to a version:
+
+- `index.html?variant=light` opens the light variant.
+- `index.html?accent=red` or `?accent=mint` sets the accent.
+- Both can be combined, for example `index.html?variant=light&accent=mint`.
+
+The choice is remembered while you click through the pages.
 
 ## Accessibility
 
 - Semantic landmarks, one `h1` per page, and a skip link
 - A visible focus ring on every control, with 44 px minimum tap targets
-- Text contrast meets WCAG AA in all three accents
+- Text contrast meets WCAG AA in both variants and all three accents. The light variant uses darker accent shades for text.
 - Native `<dialog>` for the cart, search and menu, so focus is trapped, `Esc` closes them, and focus returns to the button that opened them
 - The mobile filter drawer has its own focus trap
 - Live regions announce result counts and "added to cart"

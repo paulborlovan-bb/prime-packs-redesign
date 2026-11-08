@@ -195,15 +195,20 @@
 
     <div class="proposal" id="proposal">
       <div class="proposal__panel" id="proposal-panel" hidden>
+        <fieldset class="two">
+          <legend>Design-Vorschlag · Variante</legend>
+          <label class="swatch-opt"><input type="radio" name="pp-theme" value="dark"><span class="sw" style="background:#09090b" aria-hidden="true"></span><span>Dunkel<small>Variante 1</small></span></label>
+          <label class="swatch-opt"><input type="radio" name="pp-theme" value="light"><span class="sw" style="background:#f2f2f0" aria-hidden="true"></span><span>Hell<small>Variante 2</small></span></label>
+        </fieldset>
         <fieldset>
-          <legend>Design-Vorschlag · Akzentfarbe</legend>
+          <legend>Akzentfarbe</legend>
           <label class="swatch-opt"><input type="radio" name="pp-accent" value="blue"><span class="sw" style="background:#325fec" aria-hidden="true"></span><span>Blau<small>PrimePacks Marke</small></span></label>
           <label class="swatch-opt"><input type="radio" name="pp-accent" value="red"><span class="sw" style="background:#e0281b" aria-hidden="true"></span><span>Rot<small>Moodboard PayHot</small></span></label>
           <label class="swatch-opt"><input type="radio" name="pp-accent" value="mint"><span class="sw" style="background:#00ffcc" aria-hidden="true"></span><span>Mint<small>Moodboard Vare</small></span></label>
         </fieldset>
         <p class="proposal__note">Redesign-Vorschlag für prime-packs.at. Echte Produkte, Preise und Texte aus dem Shop (Stand 08.11.2026). Der Warenkorb ist eine Demo.</p>
       </div>
-      <button class="proposal__toggle" type="button" aria-expanded="false" aria-controls="proposal-panel" aria-label="Design-Vorschlag: Akzentfarbe wählen"><span class="proposal__swatch" aria-hidden="true"></span><span class="proposal__txt" aria-hidden="true">Vorschlag</span></button>
+      <button class="proposal__toggle" type="button" aria-expanded="false" aria-controls="proposal-panel" aria-label="Design-Vorschlag: Variante und Akzentfarbe wählen"><span class="proposal__swatch" aria-hidden="true"></span><span class="proposal__txt" aria-hidden="true">Vorschlag</span></button>
     </div>`;
   }
 
@@ -418,6 +423,18 @@
     $$('input[name="pp-accent"]').forEach(i => { i.checked = i.value === a; });
   };
   setAccent(params().get('accent') || store.get(ACCENT_KEY, 'blue'));
+
+  /* Variant 1 "Dunkel" (default) or variant 2 "Hell" – ?variant=light */
+  const THEME_KEY = 'pp-theme';
+  const setTheme = t => {
+    if (t !== 'light') t = 'dark';
+    if (t === 'light') root.dataset.theme = 'light'; else delete root.dataset.theme;
+    store.set(THEME_KEY, t);
+    $$('input[name="pp-theme"]').forEach(i => { i.checked = i.value === t; });
+    const meta = $('meta[name="theme-color"]');
+    if (meta) meta.content = t === 'light' ? '#f2f2f0' : '#09090b';
+  };
+  setTheme(params().get('variant') || store.get(THEME_KEY, 'dark'));
   const propBtn = $('.proposal__toggle');
   const propPanel = $('#proposal-panel');
   const closeProp = () => { propPanel.hidden = true; propBtn.setAttribute('aria-expanded', 'false'); };
@@ -425,9 +442,12 @@
     const open = propPanel.hidden;
     propPanel.hidden = !open;
     propBtn.setAttribute('aria-expanded', String(open));
-    if (open) $('input[name="pp-accent"]:checked', propPanel)?.focus();
+    if (open) $('input[name="pp-theme"]:checked', propPanel)?.focus();
   });
-  propPanel.addEventListener('change', e => { if (e.target.name === 'pp-accent') setAccent(e.target.value); });
+  propPanel.addEventListener('change', e => {
+    if (e.target.name === 'pp-accent') setAccent(e.target.value);
+    if (e.target.name === 'pp-theme') setTheme(e.target.value);
+  });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !propPanel.hidden) { closeProp(); propBtn.focus(); } });
   document.addEventListener('click', e => { if (!propPanel.hidden && !e.target.closest('#proposal')) closeProp(); });
 
