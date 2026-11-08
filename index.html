@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrimePacks TCGs – 100% Original. Factory Sealed. Von Sammlern geschätzt.</title>
+  <meta name="description" content="Premium-Hardware, TCG-Highlights und Lifestyle-Zubehör an einem Ort. Entdecke aktuelle Drops, sichere dir Vorbestellungen und genieße schnellen Versand.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>(function(){var d=document.documentElement;d.className='js';try{var a=new URLSearchParams(location.search).get('accent')||JSON.parse(localStorage.getItem('pp-accent')||'null');if(a==='red'||a==='mint')d.setAttribute('data-accent',a)}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.shopify.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+<main id="main" tabindex="-1">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="label"><span class="dot dot--ok" aria-hidden="true"></span>Live · <span data-total-products>84</span> Produkte online</p>
+        <h1 class="h-display" id="hero-title"><span>100 % Original.</span> <span class="muted-line">Factory Sealed.</span></h1>
+        <p class="lead">Premium-Hardware, TCG-Highlights und Lifestyle-Zubehör an einem Ort. Entdecke aktuelle Drops, sichere dir Vorbestellungen und genieße schnellen Versand.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="products.html">Jetzt entdecken
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="products.html?cat=angebote">Aktuelle Angebote</a>
+        </div>
+        <div class="proof">
+          <div class="avatars" aria-hidden="true">
+            <img src="https://framerusercontent.com/images/PIMj0Z2sT11bzv97JPk8JcPBj0.jpeg?width=76&height=76" alt="" width="36" height="36">
+            <img src="https://framerusercontent.com/images/Y1UHWMZ6Vq6OACn00SLNnG3IWeU.jpeg?width=76&height=76" alt="" width="36" height="36">
+            <img src="https://framerusercontent.com/images/4pbxtNHS19zSRyC07DwHX8n6J8.jpeg?width=76&height=76" alt="" width="36" height="36">
+            <span>+47</span>
+          </div>
+          <p>Von Käufern weltweit geschätzt</p>
+        </div>
+      </div>
+      <div class="stage" id="hero-stage"></div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="wrap" aria-label="PrimePacks in Zahlen">
+    <div class="stats reveal">
+      <div class="stat"><p class="stat__n" data-total-products>84</p><p class="label">Produkte online</p></div>
+      <div class="stat"><p class="stat__n">1–3</p><p class="label">Werktage Bearbeitung</p></div>
+      <div class="stat"><p class="stat__n">14</p><p class="label">Tage Rücktrittsrecht</p></div>
+      <div class="stat"><p class="stat__n">24<em>h</em></p><p class="label">Antwortzeit Support</p></div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER (decorative) ============ -->
+  <div class="ticker" id="ticker" aria-hidden="true" style="margin-top:clamp(40px,6vw,72px)"></div>
+
+  <!-- ============ DROPS ============ -->
+  <section class="section" aria-labelledby="drops-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-head__text">
+          <p class="label"><span class="slashes">///</span>Drops &amp; Restocks</p>
+          <h2 class="h-2" id="drops-title">Aktuelle Drops &amp; Restocks</h2>
+          <p class="lead">Die neuesten TCG-Highlights und Premium-Boxen. Schnell sein lohnt sich – nur streng limitierte Stückzahlen auf Lager.</p>
+        </div>
+        <a class="btn btn--ghost" id="drops-all" href="products.html">Alle Produkte ansehen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="pills pills--scroll" id="drops-tabs" role="group" aria-label="Drops nach Kategorie filtern" style="margin-bottom:24px">
+        <button class="pill" type="button" data-tab="" aria-pressed="true">Alle</button>
+        <button class="pill" type="button" data-tab="pokemon" aria-pressed="false">Pokémon</button>
+        <button class="pill" type="button" data-tab="tcg" aria-pressed="false">Weitere TCGs</button>
+        <button class="pill" type="button" data-tab="elektronik" aria-pressed="false">Elektronik &amp; Audio</button>
+        <button class="pill" type="button" data-tab="christmas" aria-pressed="false">Christmas</button>
+      </div>
+      <p class="sr-only" role="status" id="drops-status"></p>
+      <div class="grid" id="drops-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES (bento) ============ -->
+  <section class="section" aria-labelledby="cat-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-head__text">
+          <p class="label"><span class="slashes">///</span>Kategorien</p>
+          <h2 class="h-2" id="cat-title">Alles an einem Ort.</h2>
+        </div>
+        <p class="lead" style="max-width:40ch">Von Pokémon Boostern über One Piece Displays bis zur Kamera für dein Unboxing.</p>
+      </div>
+
+      <ul class="bento reveal">
+        <li class="tile tile--poke">
+          <img class="tile__art" src="https://framerusercontent.com/images/XNC3KmVurqNJ2hg9CTLaQyouqw.jpg" alt="" loading="lazy" width="1414" height="1000">
+          <div class="tile__top">
+            <span class="chip chip--solid" data-count-cat="pokemon">Pokémon</span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=pokemon">Pokémon</a></h3>
+            <p class="tile__desc" style="color:#d4d4d8">Booster, Top Trainer Boxen und Kollektionen – Deutsch &amp; Englisch.</p>
+          </div>
+        </li>
+
+        <li class="tile tile--xmas">
+          <img class="tile__img" data-product-img="nintendo-switch-2-the-legend-of-zelda-40th-anniversary-edition" alt="" loading="lazy">
+          <div class="tile__top">
+            <span class="label"><span class="dot" aria-hidden="true"></span><span data-count-cat="christmas"></span></span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=christmas">Christmas</a></h3>
+            <p class="tile__desc">Geschenke für Sammler &amp; Gamer.</p>
+          </div>
+        </li>
+
+        <li class="tile tile--tcg">
+          <img class="tile__img" data-product-img="one-piece-card-game-the-time-of-battle-booster-box-op-16" alt="" loading="lazy">
+          <div class="tile__top">
+            <span class="label"><span class="dot" aria-hidden="true"></span><span data-count-cat="tcg"></span></span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=tcg">Weitere TCGs</a></h3>
+            <p class="tile__desc">One Piece Card Game.</p>
+          </div>
+        </li>
+
+        <li class="tile tile--elek">
+          <img class="tile__img" data-product-img="canon-powershot-g7-x-mark-iii-20-1-mp-4k-schwarz-silber" alt="" loading="lazy">
+          <div class="tile__top">
+            <span class="label"><span class="dot" aria-hidden="true"></span><span data-count-cat="elektronik"></span></span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=elektronik">Elektronik &amp; Audio</a></h3>
+            <p class="tile__desc">Aktuelle Ausrüstung: Kameras, Konsolen und Tonies.</p>
+          </div>
+        </li>
+
+        <li class="tile tile--pre">
+          <img class="tile__img" data-product-img="pokemon-30th-anniversary-ultra-premium-collection-umbreon-en" alt="" loading="lazy">
+          <div class="tile__top">
+            <span class="chip chip--warn"><span class="dot dot--warn" aria-hidden="true"></span><span data-count-cat="vorbestellungen"></span></span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=vorbestellungen">Vorbestellungen</a></h3>
+            <p class="tile__desc">Die nächsten großen Drops – jetzt sichern.</p>
+          </div>
+        </li>
+
+        <li class="tile tile--legami">
+          <img class="tile__img" data-product-img="legami-loeschbare-gelschreiber-3er-set-hunde-fur-ever-friends" alt="" loading="lazy">
+          <div class="tile__top">
+            <span class="label"><span class="dot" aria-hidden="true"></span><span data-count-cat="legami"></span></span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=legami">Legami</a></h3>
+            <p class="tile__desc">Lifestyle &amp; Schreibwaren.</p>
+          </div>
+        </li>
+
+        <li class="tile tile--ang">
+          <img class="tile__img" data-product-img="pokemon-first-partner-illustration-collection-series-2-englisch" alt="" loading="lazy">
+          <div class="tile__top">
+            <span class="chip chip--accent" data-count-cat="angebote"></span>
+            <span class="arrow-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></svg></span>
+          </div>
+          <div>
+            <h3 class="tile__name"><a class="tile__link" href="products.html?cat=angebote">Angebote</a></h3>
+            <p class="tile__desc">Reduziert, solange der Vorrat reicht.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE (dashboard bento) ============ -->
+  <section class="section" aria-labelledby="service-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-head__text">
+          <p class="label"><span class="slashes">///</span>Sicher einkaufen</p>
+          <h2 class="h-2" id="service-title">Sammeln ohne Risiko.</h2>
+        </div>
+        <p class="lead" style="max-width:42ch">Originalware, ehrliche Zustandsangaben und ein Support, der wirklich antwortet.</p>
+      </div>
+
+      <div class="service">
+        <article class="panel panel--glow reveal">
+          <p class="label"><span class="dot" aria-hidden="true"></span>Echtheit</p>
+          <h3 class="panel__title">100 % Original.<br>Von Sammlern geschätzt.</h3>
+          <p class="panel__text">Wir verkaufen ausschließlich originale Produkte von vertrauenswürdigen Lieferanten und Vertriebspartnern.</p>
+          <ul class="check-list">
+            <li class="check-row">Neuware in Originalverpackung <span class="chip chip--ok">Standard</span></li>
+            <li class="check-row">Beschädigte OVP klar gekennzeichnet <span class="chip chip--warn">Transparent</span></li>
+            <li class="check-row">Lagernd angezeigt heißt bestellbar <span class="chip chip--ok">Live</span></li>
+          </ul>
+        </article>
+
+        <article class="panel reveal">
+          <p class="label"><span class="dot" aria-hidden="true"></span>Versand</p>
+          <div style="display:flex;gap:12px 36px;flex-wrap:wrap">
+            <p class="big-n">1–3<small>Werktage Bearbeitung</small></p>
+            <p class="big-n">2–5<small>Werktage Lieferung</small></p>
+          </div>
+          <p class="panel__text">Versand aus Österreich in alle EU-Länder. Sobald dein Paket unterwegs ist, bekommst du die Sendungsverfolgung per E-Mail.</p>
+          <ol class="steps">
+            <li class="step"><span class="step__bar" aria-hidden="true"></span><span class="step__t">Bestellt</span></li>
+            <li class="step"><span class="step__bar" aria-hidden="true"></span><span class="step__t">Bearbeitet</span></li>
+            <li class="step"><span class="step__bar" aria-hidden="true"></span><span class="step__t">Versendet</span></li>
+            <li class="step"><span class="step__bar" style="--p:.4" aria-hidden="true"></span><span class="step__t">Zugestellt</span></li>
+          </ol>
+        </article>
+
+        <article class="panel reveal">
+          <p class="label"><span class="dot" aria-hidden="true"></span>Zahlung</p>
+          <h3 class="panel__title">Sicher bezahlen</h3>
+          <p class="panel__text">Kreditkarte, PayPal, Apple Pay, Google Pay oder Klarna – je nach Land. Wir erhalten nie deine vollständigen Kartendaten.</p>
+          <div data-pay></div>
+        </article>
+
+        <article class="panel reveal">
+          <p class="label"><span class="dot" aria-hidden="true"></span>Rückgabe</p>
+          <p class="big-n">14<small>Tage</small></p>
+          <p class="panel__text">Gesetzliches Rücktrittsrecht. Ab 40 € Bestellwert übernehmen wir die Kosten der Rücksendung.</p>
+        </article>
+
+        <article class="panel panel--glow reveal">
+          <p class="label"><span class="dot" aria-hidden="true"></span>Kundenservice</p>
+          <p class="big-n">24<small>Stunden</small></p>
+          <p class="panel__text">Antwort an Werktagen. Schreib uns mit deiner Bestellnummer.</p>
+          <a class="btn btn--light btn--sm" href="mailto:kontakt@prime-packs.at" style="justify-self:start;align-self:flex-start">kontakt@prime-packs.at</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRE-ORDERS ============ -->
+  <section class="section" aria-labelledby="pre-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-head__text">
+          <p class="label"><span class="slashes">///</span>Vorbestellungen</p>
+          <h2 class="h-2" id="pre-title">Die nächsten großen Drops.</h2>
+        </div>
+        <a class="btn btn--ghost" href="products.html?cat=vorbestellungen">Alle Vorbestellungen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <ul class="tx-list" id="preorders"></ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" aria-labelledby="faq-title" style="padding-top:0">
+    <div class="wrap faq">
+      <div class="faq__aside reveal">
+        <p class="label"><span class="slashes">///</span>FAQ</p>
+        <h2 class="h-2" id="faq-title">Fragen &amp; Antworten</h2>
+        <p class="lead">Hier findest du alle wichtigen Details rund um deinen Einkauf, Retouren und die Qualität unserer Produkte.</p>
+        <div class="contact-card">
+          <p class="label"><span class="dot dot--ok" aria-hidden="true"></span>Support online</p>
+          <p style="font-size:20px;font-weight:600;letter-spacing:-.02em">Noch Fragen?</p>
+          <p class="muted">Wir antworten normalerweise innerhalb von 24 Stunden an Werktagen.</p>
+          <a class="btn btn--primary" href="mailto:kontakt@prime-packs.at" style="justify-self:start">Schreib uns</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="pills pills--scroll" id="faq-tabs" role="group" aria-label="Fragen nach Thema filtern" style="margin-bottom:24px">
+          <button class="pill" type="button" data-faq="bestellung" aria-pressed="true">Bestellung</button>
+          <button class="pill" type="button" data-faq="produkte" aria-pressed="false">Produkte</button>
+          <button class="pill" type="button" data-faq="versand" aria-pressed="false">Versand</button>
+          <button class="pill" type="button" data-faq="rueckgabe" aria-pressed="false">Rückgabe</button>
+          <button class="pill" type="button" data-faq="zahlung" aria-pressed="false">Zahlung</button>
+          <button class="pill" type="button" data-faq="all" aria-pressed="false">Alle</button>
+        </div>
+
+        <div class="faq-group" data-group="bestellung">
+          <h3 class="label">Bestellung</h3>
+          <details class="acc"><summary><span>Wie kann ich bei euch bestellen?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Lege die gewünschten Produkte in den Warenkorb und folge anschließend den Schritten im Checkout. Nach erfolgreicher Bestellung erhältst du automatisch eine Bestellbestätigung per E-Mail.</p></div></details>
+          <details class="acc"><summary><span>Kann ich meine Bestellung nachträglich ändern oder stornieren?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Kontaktiere uns bitte so schnell wie möglich unter <a href="mailto:kontakt@prime-packs.at">kontakt@prime-packs.at</a>. Solange deine Bestellung noch nicht bearbeitet oder versendet wurde, versuchen wir gerne, Änderungen oder eine Stornierung vorzunehmen. Nach dem Versand ist eine Änderung leider nicht mehr möglich.</p></div></details>
+          <details class="acc"><summary><span>Warum habe ich keine Bestellbestätigung erhalten?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Bitte kontrolliere zunächst deinen Spam- oder Werbeordner. Prüfe außerdem, ob du beim Bestellvorgang die richtige E-Mail-Adresse eingegeben hast. Solltest du weiterhin keine Bestätigung finden, kontaktiere uns bitte mit deinem vollständigen Namen.</p></div></details>
+          <details class="acc"><summary><span>Erhalte ich eine Rechnung?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Ja. Du erhältst eine Rechnung zu deiner Bestellung elektronisch per E-Mail beziehungsweise gemeinsam mit deiner Versandbestätigung.</p></div></details>
+        </div>
+
+        <div class="faq-group" data-group="produkte" hidden>
+          <h3 class="label">Produkte und Echtheit</h3>
+          <details class="acc"><summary><span>Sind eure Produkte original?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Ja, wir verkaufen ausschließlich originale Produkte von vertrauenswürdigen Lieferanten und Vertriebspartnern.</p></div></details>
+          <details class="acc"><summary><span>Sind die Produkte neu und originalverpackt?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Sofern in der jeweiligen Produktbeschreibung nichts anderes angegeben ist, handelt es sich um Neuware in der Originalverpackung. Abweichungen, beschädigte Verpackungen oder bereits geöffnete Produkte werden ausdrücklich in der Produktbeschreibung erwähnt.</p></div></details>
+          <details class="acc"><summary><span>Sind die angebotenen Produkte wirklich lagernd?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Produkte, die als verfügbar angezeigt werden, sind grundsätzlich bestellbar. In seltenen Fällen kann es aufgrund gleichzeitiger Bestellungen zu einer Überschneidung des Lagerbestands kommen. In diesem Fall kontaktieren wir dich schnellstmöglich und erstatten bereits geleistete Zahlungen vollständig zurück.</p></div></details>
+          <details class="acc"><summary><span>Warum können sich eure Preise ändern?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Unsere Preise richten sich unter anderem nach Einkaufspreisen, Verfügbarkeit, Nachfrage und Marktentwicklung. Der für deine Bestellung maßgebliche Preis ist der Preis, der zum Zeitpunkt des Bestellabschlusses im Checkout angezeigt wird.</p></div></details>
+        </div>
+
+        <div class="faq-group" data-group="versand" hidden>
+          <h3 class="label">Versand</h3>
+          <details class="acc"><summary><span>Wohin liefert ihr?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Wir liefern derzeit in alle EU-Länder. Die verfügbaren Lieferländer und Versandkosten werden dir im Checkout angezeigt.</p></div></details>
+          <details class="acc"><summary><span>Wie lange dauert der Versand?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Lagernde Produkte werden normalerweise innerhalb von 1–3 Werktagen bearbeitet. Die anschließende Lieferzeit beträgt je nach Zielland und Versanddienstleister ungefähr 2–5 Werktage.</p></div></details>
+          <details class="acc"><summary><span>Kann ich meine Bestellung verfolgen?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Ja. Sobald deine Bestellung versendet wurde, erhältst du eine Versandbestätigung mit deiner Sendungsverfolgungsnummer. Es kann einige Stunden dauern, bis der Versanddienstleister die ersten Informationen anzeigt.</p></div></details>
+          <details class="acc"><summary><span>Was mache ich, wenn mein Paket nicht angekommen ist?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Überprüfe bitte zuerst die Sendungsverfolgung sowie mögliche Ablageorte und frage gegebenenfalls bei Nachbarn nach. Sollte das Paket weiterhin nicht auffindbar sein, kontaktiere uns bitte unter <a href="mailto:kontakt@prime-packs.at">kontakt@prime-packs.at</a> und sende uns deine Bestellnummer.</p></div></details>
+        </div>
+
+        <div class="faq-group" data-group="rueckgabe" hidden>
+          <h3 class="label">Rückgabe und Reklamation</h3>
+          <details class="acc"><summary><span>Kann ich meine Bestellung zurückgeben?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Verbraucher haben bei einem Onlinekauf grundsätzlich ein gesetzliches Rücktrittsrecht von 14 Kalendertagen. Die Frist beginnt bei Waren grundsätzlich mit dem Erhalt der Bestellung. Die vollständigen Bedingungen und Ausnahmen findest du in unserer <a href="https://prime-packs.at/support-rechtliches/widerrufsbelehrung">Widerrufsbelehrung</a>.</p></div></details>
+          <details class="acc"><summary><span>In welchem Zustand muss die Ware zurückgesendet werden?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Die Ware muss vollständig, unbenutzt und im Originalzustand zurückgesendet werden – also in jenem Zustand, in dem sie von uns geliefert wurde. Sämtliches Zubehör, Beilagen, Etiketten, Versiegelungen und die Originalverpackung müssen, soweit vorhanden, vollständig enthalten und unbeschädigt sein.</p><p>Gesetzliche Rücktritts- und Gewährleistungsrechte bleiben davon unberührt. Wurde die Ware über das zur Prüfung notwendige Maß hinaus benutzt oder beschädigt, kann eine entsprechende Wertminderung von der Rückerstattung abgezogen werden.</p></div></details>
+          <details class="acc"><summary><span>Wie melde ich eine Rückgabe an?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Kontaktiere uns unter <a href="mailto:kontakt@prime-packs.at">kontakt@prime-packs.at</a> und nenne deine Bestellnummer sowie die Artikel, die du zurückgeben möchtest. Wir übermitteln dir anschließend die weiteren Rücksendeinformationen.</p></div></details>
+          <details class="acc"><summary><span>Wer bezahlt die Rücksendung?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Bei einem ursprünglichen Bestellwert von mehr als 40 € übernehmen wir die unmittelbaren Kosten der Rücksendung. Bitte kontaktiere uns vor der Rücksendung, damit wir dir ein Rücksendeetikett beziehungsweise die notwendigen Rücksendeinformationen übermitteln können.</p><p>Bei Bestellungen mit einem Wert von bis einschließlich 40 € trägt der Kunde die unmittelbaren Rücksendekosten. Bei falsch gelieferten, beschädigten oder mangelhaften Artikeln übernehmen wir die Rücksendekosten unabhängig vom Bestellwert. Gesetzliche Gewährleistungsrechte bleiben unberührt.</p></div></details>
+          <details class="acc"><summary><span>Kann ich geöffnete Sammelkarten- oder Sammlerprodukte zurückgeben?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Nein. Im Rahmen unserer freiwilligen Rücknahme nehmen wir Sammelkarten- und Sammlerprodukte nur ungeöffnet, unbenutzt und im vollständigen Originalzustand zurück. Die Versiegelung und Originalverpackung dürfen nicht geöffnet oder beschädigt sein. Gesetzliche Rücktritts- und Gewährleistungsrechte, insbesondere bei mangelhafter oder falsch gelieferter Ware, bleiben unberührt.</p></div></details>
+          <details class="acc"><summary><span>Was mache ich, wenn ich einen falschen oder defekten Artikel erhalten habe?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Kontaktiere uns bitte unter <a href="mailto:kontakt@prime-packs.at">kontakt@prime-packs.at</a> und sende uns deine Bestellnummer sowie aussagekräftige Fotos oder Videos. Wir prüfen den Fall schnellstmöglich und informieren dich über die weitere Vorgehensweise.</p></div></details>
+        </div>
+
+        <div class="faq-group" data-group="zahlung" hidden>
+          <h3 class="label">Zahlung und Sicherheit</h3>
+          <details class="acc"><summary><span>Welche Zahlungsmethoden akzeptiert ihr?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Die aktuell verfügbaren Zahlungsmethoden werden dir im Checkout angezeigt. Je nach Land können unter anderem Kreditkarte, PayPal, Apple Pay, Google Pay oder weitere Shopify-Zahlungsmethoden verfügbar sein.</p></div></details>
+          <details class="acc"><summary><span>Wann wird meine Zahlung abgebucht?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Die Zahlung wird abhängig von der gewählten Zahlungsart während oder unmittelbar nach Abschluss deiner Bestellung verarbeitet.</p></div></details>
+          <details class="acc"><summary><span>Sind meine Zahlungsdaten sicher?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Die Zahlung wird über die im Checkout angezeigten Zahlungsanbieter verarbeitet. Wir erhalten dabei grundsätzlich nicht deine vollständigen Kreditkarteninformationen.</p></div></details>
+          <details class="acc"><summary><span>Wie kann ich euch kontaktieren?</span><span class="pm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+            <div class="acc__body"><p>Du erreichst uns per E-Mail unter <a href="mailto:kontakt@prime-packs.at">kontakt@prime-packs.at</a>. Bitte gib bei Fragen zu einer Bestellung immer deine Bestellnummer an. Wir antworten normalerweise innerhalb von 24 Stunden an Werktagen.</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<noscript><p style="padding:24px;text-align:center">Bitte aktiviere JavaScript, um Produkte, Warenkorb und Navigation zu sehen.</p></noscript>
+<script src="data/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

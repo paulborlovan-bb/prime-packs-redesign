@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop – PrimePacks TCGs</title>
+  <meta name="description" content="Alle Produkte von PrimePacks: Pokémon, One Piece und weitere TCGs, Elektronik &amp; Audio, Legami, Vorbestellungen und Angebote.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script>(function(){var d=document.documentElement;d.className='js';try{var a=new URLSearchParams(location.search).get('accent')||JSON.parse(localStorage.getItem('pp-accent')||'null');if(a==='red'||a==='mint')d.setAttribute('data-accent',a)}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.shopify.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="list">
+
+<main id="main" tabindex="-1">
+
+  <div class="page-head">
+    <div class="wrap">
+      <nav aria-label="Brotkrumen">
+        <ol class="crumbs">
+          <li><a href="index.html">Startseite</a></li>
+          <li id="crumb-shop" hidden><a href="products.html">Shop</a></li>
+          <li><span aria-current="page" id="crumb-current">Alle Produkte</span></li>
+        </ol>
+      </nav>
+      <div class="page-head__row">
+        <div>
+          <p class="label" id="list-label"><span class="slashes">///</span>Shop</p>
+          <h1 class="h-1" id="list-title">Alle Produkte</h1>
+          <p class="lead" id="list-desc"></p>
+        </div>
+      </div>
+      <nav aria-label="Kategorien" style="margin-top:28px">
+        <div class="pills pills--scroll" id="cat-pills"></div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="shop">
+
+      <aside class="filters" id="filters" aria-labelledby="filters-title">
+        <div class="filters__head">
+          <h2 class="label" id="filters-title"><span class="dot" aria-hidden="true"></span>Filter</h2>
+          <button class="icon-btn" id="filters-close" type="button" aria-label="Filter schließen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+
+        <form class="fgroup" id="f-search-form" role="search" style="padding-bottom:16px">
+          <label class="fgroup__title" for="f-search">Suche</label>
+          <div class="field" style="clear:both;min-height:48px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+            <input type="search" id="f-search" placeholder="Produkt suchen …" autocomplete="off">
+          </div>
+        </form>
+
+        <div class="fgroup" style="padding-block:4px">
+          <label class="switch-row" for="f-stock">
+            <span>Nur lagernde Artikel</span>
+            <input class="switch" type="checkbox" id="f-stock" role="switch">
+          </label>
+        </div>
+
+        <fieldset class="fgroup" id="f-lang"><legend>Sprache</legend></fieldset>
+        <fieldset class="fgroup" id="f-type"><legend>Produkttyp</legend></fieldset>
+        <fieldset class="fgroup" id="f-price"><legend>Preis</legend></fieldset>
+
+        <div class="filters__apply">
+          <button class="btn btn--primary btn--block" id="filters-apply" type="button">Produkte anzeigen</button>
+        </div>
+      </aside>
+      <div class="scrim" id="scrim"></div>
+
+      <section aria-labelledby="results-title">
+        <h2 class="sr-only" id="results-title">Produkte</h2>
+        <div class="toolbar">
+          <div class="toolbar__left">
+            <button class="btn btn--ghost btn--sm filter-btn" id="filter-open" type="button" aria-expanded="false" aria-controls="filters">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+              Filter <span id="filter-count"></span>
+            </button>
+            <p class="result-count" id="result-count" role="status" tabindex="-1"></p>
+          </div>
+          <div class="select">
+            <label for="sort">Sortieren:</label>
+            <select id="sort"></select>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+        </div>
+
+        <div class="active-filters" id="active-filters" style="margin-bottom:16px"></div>
+
+        <div class="grid" id="grid"></div>
+
+        <div class="empty" id="empty" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5v-9Z"/><path d="m3 7.5 9 4.5 9-4.5M12 12v9"/></svg>
+          <p class="h-3">Keine Produkte gefunden</p>
+          <p class="muted">Passe deine Filter an oder setze sie zurück.</p>
+          <button class="btn btn--primary" id="empty-reset" type="button">Filter zurücksetzen</button>
+        </div>
+
+        <div class="load-more" id="load-more">
+          <p class="result-count" id="shown-text"></p>
+          <div class="meter" aria-hidden="true"><span id="shown-meter"></span></div>
+          <button class="btn btn--ghost" id="load-more-btn" type="button">Mehr laden</button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<noscript><p style="padding:24px;text-align:center">Bitte aktiviere JavaScript, um Produkte, Filter und Warenkorb zu sehen.</p></noscript>
+<script src="data/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
